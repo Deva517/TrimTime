@@ -24,3 +24,6 @@ Open `index.html` in a browser or access the live site using GitHub Pages.
 
 ## Project Status
 This project is created as a beginner-level web development project.
+
+## Live Demo
+https://deva517.github.io/TrimTime/
