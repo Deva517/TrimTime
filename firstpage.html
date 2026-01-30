@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>TrimTime Login</title>
+
+<style>
+*{
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* COLORFUL BACKGROUND */
+body{
+    margin: 0;
+    height: 100vh;
+
+    background: linear-gradient(
+        to bottom right,
+        seagreen,
+        mediumseagreen,
+        lightseagreen,
+        lightblue
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GLASS CONTAINER */
+.overlay{
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(8px);
+    padding: 40px;
+    border-radius: 25px;
+    width: 380px;
+    text-align: center;
+}
+
+/* HEADING */
+.title{
+    color: darkgreen;
+    font-size: 32px;
+    margin-bottom: 30px;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px grey;
+}
+
+/* LOGIN BOX */
+.up{
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 20px grey;
+}
+
+/* LABELS */
+label{
+    display: block;
+    text-align: left;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: black;
+}
+
+/* INPUTS */
+input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-size: 14px;
+}
+
+/* BUTTON */
+button{
+    width: 100%;
+    padding: 12px;
+    background-color: seagreen;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: darkgreen;
+}
+</style>
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <h1 class="title">
+        Welcome to <br>
+        TrimTime
+    </h1>
+
+    <div class="up">
+        <label for="username">Phone Number</label>
+        <input type="text" id="username" placeholder="Enter phone number">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password">
+
+        <button onclick="myAg()">Enter</button>
+    </div>
+
+</div>
+
+<script>
+function myAg(){
+
+    // Get input values
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    // Validation check
+    if(username === "" || password === ""){
+        alert("Please enter both phone number and password");
+    }
+    else{
+        window.location.href = "second_page.html";
+    }
+}
+</script>
+
+</body>
+</html>

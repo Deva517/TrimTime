@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Select Time Slot - TrimTime</title>
+
+<style>
+*{
+    box-sizing: border-box;
+    font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+}
+
+/* PAGE BACKGROUND */
+body{
+    margin: 0;
+    min-height: 100vh;
+   background: linear-gradient(
+        135deg,
+        lavender,
+        lightsteelblue,
+        powderblue
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* MAIN CARD */
+.container{
+    background-color: white;
+    padding: 35px 30px;
+    border-radius: 30px;
+    width: 340px;
+    text-align: center;
+    box-shadow: 
+        0px 10px 25px rgba(0,0,0,0.2),
+        inset 0px 0px 10px rgba(0,128,128,0.1);
+}
+
+/* HEADING */
+h1{
+    color: darkgreen;
+    margin-bottom: 8px;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+/* SUBTEXT */
+.subtext{
+    font-size: 13px;
+    color: gray;
+    margin-bottom: 25px;
+}
+
+/* SLOT LIST */
+.slots{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* SLOT BUTTON */
+button{
+    background: linear-gradient(
+        to right,
+        seagreen,
+        mediumseagreen
+    );
+    color: white;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* HOVER EFFECT */
+button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+}
+
+/* ACTIVE (CLICK FEEL) */
+button:active{
+    transform: scale(0.97);
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Choose Your Slot</h1>
+    <div class="subtext">Select a convenient time for your visit</div>
+
+    <div class="slots">
+        <button onclick="selectTime('9:00 AM')">9:00 AM</button>
+        <button onclick="selectTime('10:00 AM')">10:00 AM</button>
+        <button onclick="selectTime('11:00 AM')">11:00 AM</button>
+        <button onclick="selectTime('12:00 PM')">12:00 PM</button>
+        <button onclick="selectTime('1:00 PM')">1:00 PM</button>
+    </div>
+
+</div>
+
+<script>
+function selectTime(t){
+    alert("Slot booked at " + t);
+}
+</script>
+
+</body>
+</html>

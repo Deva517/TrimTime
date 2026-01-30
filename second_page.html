@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Select City - TrimTime</title>
+
+<style>
+*{
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* PAGE BACKGROUND */
+body{
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(
+         to bottom right,
+        honeydew,
+        lightgreen,
+        mediumseagreen
+    );
+    padding: 30px;
+}
+
+/* MAIN CONTAINER */
+.main{
+    max-width: 900px;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.25);
+    padding: 30px;
+    border-radius: 25px;
+}
+
+/* HEADING */
+h1{
+    text-align: center;
+    color: darkgreen;
+    font-family: Georgia, "Times New Roman", serif;
+    margin-bottom: 25px;
+}
+
+/* CITY BUTTONS */
+.cities{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.city-btn{
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    cursor: pointer;
+    color: white;
+}
+
+.hyd{ background-color: seagreen; }
+.mum{ background-color: steelblue; }
+.del{ background-color: slateblue; }
+.chn{ background-color: teal; }
+.kol{ background-color: darkcyan; }
+.viz{ background-color: mediumseagreen; }
+.blr{ background-color: cadetblue; }
+
+.city-btn:hover{
+    opacity: 0.85;
+}
+
+/* CITY IMAGE */
+.city-image{
+    text-align: center;
+    margin: 30px 0;
+}
+
+.city-image img{
+    width: 600px;
+    
+    opacity: 1;
+}
+
+/* SALON SECTION */
+
+
+/* SALON CARD */
+.salon-card{
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0px 5px 15px gray;
+}
+
+.salon-card b{
+    color: darkgreen;
+}
+
+/* CENTER ONLY BUTTON */
+.btn-wrap{
+    text-align: center;
+}
+
+/* SELECT TIME SLOT BUTTON */
+.salon-card button{
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: seagreen;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.salon-card button:hover{
+    background-color: darkgreen;
+}
+</style>
+</head>
+
+<body>
+
+<div class="main">
+
+<h1>Select Your City</h1>
+
+<!-- CITY BUTTONS -->
+<div class="cities">
+    <button class="city-btn hyd" onclick="showHyd()">Hyderabad</button>
+    <button class="city-btn mum" onclick="showMumbai()">Mumbai</button>
+    <button class="city-btn del" onclick="showDelhi()">Delhi</button>
+    <button class="city-btn chn" onclick="showChennai()">Chennai</button>
+    <button class="city-btn kol" onclick="showKolkata()">Kolkata</button>
+    <button class="city-btn viz" onclick="showVizag()">Vizag</button>
+    <button class="city-btn blr" onclick="showBangalore()">Bangalore</button>
+</div>
+
+<!-- CITY IMAGE -->
+<div class="city-image">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdyK1MImTHUdhjts8rWnCsdbJSPzKL53QRig&s" alt="City Illustration">
+</div>
+
+<!-- SALONS -->
+<div id="salons"></div>
+
+</div>
+
+<script>
+function goToSlots(salonName){
+    window.location.href ="third_page.html";
+}
+
+function showHyd(){
+    document.getElementById("salons").innerHTML =
+        "<div class='salon-card'><b>Style Studio</b><br>Ameerpet" +
+        "<div class='btn-wrap'><button onclick='goToSlots(\"Style Studio\")'>Select Time Slot</button></div></div>" +
+        "<div class='salon-card'><b>Green Trends</b><br>Gachibowli" +
+        "<div class='btn-wrap'><button onclick='goToSlots(\"Green Trends\")'>Select Time Slot</button></div></div>";
+}
+
+function showMumbai(){
+    document.getElementById("salons").innerHTML =
+        "<div class='salon-card'><b>Enrich Salon</b><br>Andheri" +
+        "<div class='btn-wrap'><button onclick='goToSlots(\"Enrich Salon\")'>Select Time Slot</button></div></div>" +
+        "<div class='salon-card'><b>BBlunt</b><br>Bandra" +
+        "<div class='btn-wrap'><button onclick='goToSlots(\"BBlunt\")'>Select Time Slot</button></div></div>";
+}
+
+function showDelhi(){
+    document.getElementById("salons").innerHTML =
+        "<div class='salon-card'><b>Looks Salon</b><br>Connaught Place" +
+        "<div class='btn-wrap'><button onclick='goToSlots(\"Looks Salon\")'>Select Time Slot</button></div></div>";
+}
+
+function showChennai(){
+    document.getElementById("salons").innerHTML =
+        "<div class='salon-card'><b>Naturals</b><br>T Nagar" +
+        "<div class='btn-wrap'><button onclick='goToSlots(\"Naturals\")'>Select Time Slot</button></div></div>";
+}
+
+function showKolkata(){
+    document.getElementById("salons").innerHTML =
+        "<div class='salon-card'><b>Jawed Habib</b><br>Salt Lake" +
+        "<div class='btn-wrap'><button onclick='goToSlots(\"Jawed Habib\")'>Select Time Slot</button></div></div>";
+}
+
+function showVizag(){
+    document.getElementById("salons").innerHTML =
+        "<div class='salon-card'><b>Green Trends</b><br>Dwaraka Nagar" +
+        "<div class='btn-wrap'><button onclick='goToSlots(\"Green Trends\")'>Select Time Slot</button></div></div>";
+}
+
+function showBangalore(){
+    document.getElementById("salons").innerHTML =
+        "<div class='salon-card'><b>Tony & Guy</b><br>Indiranagar" +
+        "<div class='btn-wrap'><button onclick='goToSlots(\"Tony & Guy\")'>Select Time Slot</button></div></div>";
+}
+</script>
+
+</body>
+</html>
